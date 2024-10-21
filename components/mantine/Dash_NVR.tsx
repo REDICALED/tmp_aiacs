@@ -1,13 +1,7 @@
-import { AspectRatio } from '@mantine/core';
-import ReactPlayer from 'react-player'
-import { NvrDevice } from '@/lib/Dummy/NvrDevice';
 import VideoFeed from "@/components/VideoFeed";
 import { useState } from 'react';
 
-interface DashNVRProps {
-    NvrDevice: { url: string; }[];
-  }
-export function Dash_NVR(props: DashNVRProps) {
+export function Dash_NVR() {
     const [, setLoadingCount] = useState(9);
 
     const handleLoaded = () => {

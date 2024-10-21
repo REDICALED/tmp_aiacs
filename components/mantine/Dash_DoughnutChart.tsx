@@ -1,6 +1,4 @@
-import { DonutChart } from '@mantine/charts';
 import { NetworkData } from '@/lib/Dummy/NetworkData';
-import { Doughnut } from "react-chartjs-2";
 import GaugeChart from 'react-gauge-chart'
 
 

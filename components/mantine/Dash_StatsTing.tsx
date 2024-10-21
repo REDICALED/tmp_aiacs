@@ -65,7 +65,7 @@ export function StatsRing() {
       </Paper>
     );
   });
-``
+
   return (
     <>
     <div className=' text-black'>

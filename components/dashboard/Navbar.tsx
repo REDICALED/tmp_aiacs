@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Center, Tooltip, UnstyledButton, Stack, rem } from '@mantine/core';
+import { Center, Tooltip, UnstyledButton, Stack } from '@mantine/core';
 import {
   IconHome2,
   IconGauge,
@@ -11,10 +11,8 @@ import {
   IconLogout,
   IconSwitchHorizontal,
 } from '@tabler/icons-react';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './NavbarMinimal.module.css';
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface NavbarLinkProps {
   icon: typeof IconHome2;

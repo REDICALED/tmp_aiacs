@@ -14,7 +14,7 @@ import {NvrDevice} from '@/lib/Dummy/NvrDevice';
 import Image from 'next/image';
 
 
-import React, { useState } from "react";
+import React from "react";
 
 import ClockComponent from "./ClockComponent";
 
@@ -84,7 +84,7 @@ export function DashboardComponent() {
               </div>
 
               <div className="bg-gray-800 p-4 rounded lg:w-full w-[100vw]">
-                <Dash_NVR NvrDevice={NvrDevice}/>
+                <Dash_NVR />
               </div>
 
             </div>

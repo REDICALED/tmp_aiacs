@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { UnstyledButton } from '@mantine/core';
 
 const ClockComponent = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
