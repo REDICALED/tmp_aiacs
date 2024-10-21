@@ -9,8 +9,6 @@ import {Dash_NVR} from '@/components/mantine/Dash_NVR';
 import {NavbarMinimal} from '@/components/dashboard/Navbar';
 import {HeaderSimple} from '@/components/dashboard/HeaderSimple';
 
-import {NvrDevice} from '@/lib/Dummy/NvrDevice';
-
 import Image from 'next/image';
 
 

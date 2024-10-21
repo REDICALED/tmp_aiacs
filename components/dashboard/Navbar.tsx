@@ -45,7 +45,7 @@ export function NavbarMinimal() {
   const [active, setActive] = useState(2);
 
   const links = mockdata.map((link, index) => (
-    <div className='w-[70px] h-[70px] grid place-items-center border-b-[1.4px] border-gray-700'>
+    <div key={link.label} className='w-[70px] h-[70px] grid place-items-center border-b-[1.4px] border-gray-700'>
         <NavbarLink
       {...link}
       key={link.label}
