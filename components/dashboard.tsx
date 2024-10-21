@@ -72,7 +72,7 @@ export function DashboardComponent() {
               </div>
             </div>
 
-            <div className="lg:col-span-1 space-y-4 h-full">
+            <div className="lg:col-span-1 space-y-4 lg:h-full">
               <div className="bg-gray-800 p-4 rounded lg:w-full w-[100vw]">
                 <h2 className="text-lg font-semibold mb-2">조류 근접 현황</h2>
                 <StatsRing /> 
