@@ -39,10 +39,10 @@ export function DashboardComponent() {
         </div>
 
     <div className='flex'>
-    <div className="hidden lg:block">
+    <div className="hidden lg:block lg:fixed">
     <NavbarMinimal />
       </div>
-    <div className="lg:grid lg:grid-cols-4 lg:gap-4 rounded">
+    <div className="lg:grid lg:grid-cols-4 lg:gap-4 rounded lg:ml-[80px]">
 
             <div className="lg:col-span-1 lg:grid lg:grid-rows-3 space-y-4">
 

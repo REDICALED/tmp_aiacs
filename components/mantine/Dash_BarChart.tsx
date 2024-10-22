@@ -12,7 +12,7 @@ export function Dash_BarChart() {
       data={DailyData}
       dataKey="Device"
       series={[
-        { name: 'time', color: 'violet.6' },
+        { name: 'time', color: 'indigo.6' },
       ]}
       tickLine="y"
       tooltipAnimationDuration={200}

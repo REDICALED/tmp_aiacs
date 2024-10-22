@@ -35,14 +35,11 @@ const mockdata = [
   { icon: IconHome2, label: 'Home' },
   { icon: IconGauge, label: 'Dashboard' },
   { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
-  { icon: IconCalendarStats, label: 'Releases' },
-  { icon: IconUser, label: 'Account' },
-  { icon: IconFingerprint, label: 'Security' },
   { icon: IconSettings, label: 'Settings' },
 ];
 
 export function NavbarMinimal() {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
 
   const links = mockdata.map((link, index) => (
     <div key={link.label} className='w-[70px] h-[70px] grid place-items-center border-b-[1.4px] border-gray-700'>
@@ -56,12 +53,7 @@ export function NavbarMinimal() {
   ));
 
   return (
-    <nav className={classes.navbar}>
-      <Center>
-      <div className='relative w-[45px] h-[45px]'>
-        <Image className="mr-4" src="/rian_icon.png" alt="logo" layout="fill" />
-        </div>
-      </Center>
+    <nav className={classes.navbar + `fixed`}>
 
       <div className={classes.navbarMain}>
         <Stack justify="center" gap={0}>
