@@ -3,7 +3,7 @@ import { DailyData } from '@/lib/Dummy/DailyCameraData';
 
 export function Dash_BarChart() {
   return (
-    <div className='p-1 z-40'>
+    <div className='p-1 z-40 pr-4'>
       <h1 className=' font-semibold pb-4'>
               카메라 별 조류 탐지 현황
       </h1>

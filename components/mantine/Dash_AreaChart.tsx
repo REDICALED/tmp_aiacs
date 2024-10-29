@@ -3,7 +3,7 @@ import { DailyData } from '@/lib/Dummy/DailyData';
 
 export function Dash_AreaChart() {
   return (
-    <div className='p-1 z-40'>
+    <div className='p-1 z-40 pr-4'>
             <h1 className=' font-semibold pb-4'>
               시간대 별 조류 탐지 현황
       </h1>
