@@ -4,7 +4,6 @@ import { Menu, Button, rem } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
 import { useState } from 'react';
 import Link from 'next/link';
-import { Burger } from '@mantine/core';
 
 export default function Nav_menu() {
     const [opened, setOpened] = useState(false);
@@ -13,10 +12,7 @@ export default function Nav_menu() {
     <Menu width={200} shadow="md" opened={opened} onChange={setOpened}>
       <Menu.Target>
         <Button variant="light" color="gray">
-        <Burger
-        opened={opened}
-        color="#d0d0d0"
-        />
+        ☰
         </Button>
       </Menu.Target>
 

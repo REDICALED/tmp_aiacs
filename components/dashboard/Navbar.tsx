@@ -21,7 +21,7 @@ function NavbarLink({ icon: Icon, label }: NavbarLinkProps) {
   return (
     <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
       <UnstyledButton className={classes.link}>
-        <Icon className="grid place-items-center" style={{ width: 40, height: 40 }} stroke={1.5} />
+        <Icon className="grid place-items-center text-gray-600 " style={{ width: 40, height: 40 }} stroke={1.5} />
       </UnstyledButton>
     </Tooltip>
   );
@@ -37,7 +37,7 @@ const mockdata = [
 
 export function NavbarMinimal() {
   const links = mockdata.map((link) => (
-    <Link key={link.label} href={`/${link.label}`}>
+    <Link key={link.label} href={ link.label === 'Home' ?  `/` : `/${link.label}`}>
       <div className="w-[70px] h-[70px] grid place-items-center border-b-[1.4px] border-gray-700">
         <NavbarLink {...link} />
       </div>

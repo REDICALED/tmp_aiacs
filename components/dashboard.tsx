@@ -19,7 +19,7 @@ export function DashboardComponent() {
         <div className='lg:flex grid grid-cols-2 justify-between items-center mb-4 px-4'>
         <div className='flex items-center'>
             <div className=' relative lg:w-[150px] w-[75px] h-[25px] lg:h-[80px] block '>
-                      </div>
+            </div>
         </div>
 
         <div className="hidden lg:block">
