@@ -4,6 +4,10 @@ import "./globals.css";
 import { MantineProvider } from '@mantine/core';
 import { Noto_Sans_KR } from 'next/font/google';
 import '@mantine/charts/styles.css';
+import Nav_menu from '@/components/mantine/Nav_menu';
+import {NavbarMinimal} from '@/components/dashboard/Navbar';
+import ClockComponent from "@/components/ClockComponent";
+import Image from 'next/image';
 
 const notoSansKr = Noto_Sans_KR({
   weight: ['300'],
@@ -25,7 +29,33 @@ export default function RootLayout({
       <body
         className={notoSansKr.className}
       >
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+        <div className=" bg-gray-900 text-white lg:p-4 lg:w-full w-full lg:fixed z-50">
+        <div className='lg:flex grid grid-cols-2 justify-between items-center   mb-4 px-4'>
+        <div className='flex items-center'>
+            <div className=' relative lg:w-[150px] w-[75px] h-[25px] lg:h-[50px] block '>
+                        <Image className="mr-4" src="/rian.png" alt="logo" layout="fill" />
+                      </div>
+              <h1 className=" lg:ml-10 ml-2 lg:text-2xl text-xs font-extrabold">AI-ACS</h1>
+        </div>
+
+        <div className="hidden lg:block">
+        <ClockComponent />
+        </div>
+        <div className="flex justify-end  lg:hidden right-0 pt-2">
+        <Nav_menu />
+        </div>
+        </div>
+
+    <div className='flex'>
+    <div className="hidden lg:block lg:fixed">
+    <NavbarMinimal />
+    </div>
+    </div>
+    </div>
+
+        {children}  
+        </MantineProvider>
       </body>
     </html>
   );
