@@ -36,7 +36,7 @@ export function DashboardComponent() {
             <div className='px-4 lg:w-full w-full'>
             <div className='pl-1 py-2 bg-gray-800 rounded'>
                 <div className='px-4 '>
-                  <Dash_BarChart/>
+                  <Dash_BarChart title={''}/>
                 </div>
             </div>
             </div>
@@ -44,14 +44,14 @@ export function DashboardComponent() {
             <div className='px-4 lg:w-full w-full'>
             <div className='pl-1 py-2 bg-gray-800 rounded'>
               <div className='px-4'>
-                <Dash_AreaChart/>
+                <Dash_AreaChart title={''}/>
               </div>
             </div>
             </div>
 
             <div className='px-4 lg:w-full w-full'>
             <div className="bg-gray-800 p-4 rounded ">
-                <Dash_VideoEmbed />
+                <Dash_VideoEmbed title={''} />
             </div>
             </div>
 
@@ -69,20 +69,20 @@ export function DashboardComponent() {
             <div className='px-4 lg:w-full w-full'>
               <div className="bg-gray-800 p-4 rounded lg:w-full w-full">
                 <h2 className="text-lg font-semibold mb-2">조류 근접 현황</h2>
-                <StatsRing /> 
+                <StatsRing title={''} /> 
               </div>
               </div>
 
             <div className='px-4 lg:w-full w-full'>
             <div className="bg-gray-800 p-4 rounded lg:w-full w-full">
                 <h2 className="text-lg font-semibold mb-2">네트워크 상태</h2>
-                      <Dash_DoughnutChart />
+                      <Dash_DoughnutChart title={''} />
               </div>
               </div>
 
             <div className='px-4 lg:w-full w-full pb-2'>
             <div className="bg-gray-800 p-4 rounded lg:w-full w-full">
-                <Dash_NVR />
+                <Dash_NVR title={''} />
               </div>
               </div>
 

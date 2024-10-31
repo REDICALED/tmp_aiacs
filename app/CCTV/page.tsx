@@ -2,8 +2,11 @@
 
 import {Dash_BarChart} from '@/components/mantine/Dash_BarChart';
 import {Dash_LineChart} from '@/components/mantine/Dash_LineChart';
-import { Text, Divider } from '@mantine/core';
+import { Divider } from '@mantine/core';
 import { ReactNode } from 'react';
+import {Dash_Carousel} from '@/components/mantine/Dash_Carousel';
+import '@mantine/carousel/styles.css';
+
 
 function SectionCard({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -32,7 +35,9 @@ export default function Page() {
 
     <div className='flex'>
     <div className="lg:grid lg:grid-rows-4 lg:gap-4 rounded lg:ml-[80px] mt-4 space-y-2 " style={{ width: "calc(100vw - 100px)" }}>
-
+    <SectionCard title='실시간 영상'>
+          <Dash_Carousel />
+    </SectionCard>
           <SectionCard title='주간 조류 관찰 차트 1'>
             <div className=" lg:grid lg:grid-cols-3 space-y-2" >
             <div className='px-4 lg:w-full w-full'>

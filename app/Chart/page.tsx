@@ -2,7 +2,7 @@
 
 import {Dash_BarChart} from '@/components/mantine/Dash_BarChart';
 import {Dash_LineChart} from '@/components/mantine/Dash_LineChart';
-import { Text, Divider } from '@mantine/core';
+import {  Divider } from '@mantine/core';
 import { ReactNode } from 'react';
 
 function SectionCard({ title, children }: { title: string; children: ReactNode }) {

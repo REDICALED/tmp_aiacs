@@ -24,14 +24,14 @@ export default function Page() {
         </div>
 
     <div className='flex'>
-    <div className="lg:grid lg:grid-cols-4 lg:gap-4 rounded lg:ml-[80px]">
+    <div className="lg:grid lg:grid-cols-4 lg:gap-4 rounded lg:ml-[80px] mt-4">
 
             <div className="lg:col-span-1 lg:grid lg:grid-rows-3 space-y-4">
 
             <div className='px-4 lg:w-full w-full'>
             <div className='pl-1 py-2 bg-gray-800 rounded'>
                 <div className='px-4 '>
-                  <Dash_BarChart/>
+                  <Dash_BarChart title="카메라 별 조류 탐지 현황"/>
                 </div>
             </div>
             </div>
@@ -39,14 +39,14 @@ export default function Page() {
             <div className='px-4 lg:w-full w-full'>
             <div className='pl-1 py-2 bg-gray-800 rounded'>
               <div className='px-4'>
-                <Dash_AreaChart/>
+                <Dash_AreaChart title='시간대 별 조류 탐지 현황'/>
               </div>
             </div>
             </div>
 
             <div className='px-4 lg:w-full w-full'>
             <div className="bg-gray-800 p-4 rounded ">
-                <Dash_VideoEmbed />
+                <Dash_VideoEmbed title='탐지 조류 정보'/>
             </div>
             </div>
 
@@ -63,21 +63,19 @@ export default function Page() {
 
             <div className='px-4 lg:w-full w-full'>
               <div className="bg-gray-800 p-4 rounded lg:w-full w-full">
-                <h2 className="text-lg font-semibold mb-2">조류 근접 현황</h2>
-                <StatsRing /> 
+                <StatsRing title='조류 근접 현황'/> 
               </div>
               </div>
 
             <div className='px-4 lg:w-full w-full'>
             <div className="bg-gray-800 p-4 rounded lg:w-full w-full">
-                <h2 className="text-lg font-semibold mb-2">네트워크 상태</h2>
-                      <Dash_DoughnutChart />
+                      <Dash_DoughnutChart title='네트워크 상태'/>
               </div>
               </div>
 
             <div className='px-4 lg:w-full w-full pb-2'>
             <div className="bg-gray-800 p-4 rounded lg:w-full w-full">
-                <Dash_NVR />
+                <Dash_NVR title='실시간 감시 현황'/>
               </div>
               </div>
 

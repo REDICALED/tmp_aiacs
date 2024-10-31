@@ -1,11 +1,11 @@
 import { BarChart } from '@mantine/charts';
 import { DailyData } from '@/lib/Dummy/DailyCameraData';
 
-export function Dash_BarChart() {
+export function Dash_BarChart({ title }: { title: string }) {
   return (
     <div className='p-1 z-40 pr-4'>
       <h1 className=' font-semibold pb-4'>
-              카메라 별 조류 탐지 현황
+              {title}
       </h1>
     <BarChart
       h={300}
@@ -16,6 +16,7 @@ export function Dash_BarChart() {
       ]}
       tickLine="y"
       tooltipAnimationDuration={200}
+      className='p-2'
     />
     </div>
 

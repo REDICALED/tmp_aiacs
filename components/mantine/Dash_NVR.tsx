@@ -1,7 +1,7 @@
 import VideoFeed from "@/components/VideoFeed";
 import { useState } from 'react';
 
-export function Dash_NVR() {
+export function Dash_NVR({ title }: { title: string }) {
     const [, setLoadingCount] = useState(9);
 
     const handleLoaded = () => {
@@ -9,7 +9,7 @@ export function Dash_NVR() {
     };
   return (
     <>
-    <h2 className="text-lg font-semibold mb-2">실시간 감시 현황</h2>
+    <h2 className="text-lg font-semibold mb-2">{title}</h2>
         <div className="grid grid-cols-2 gap-2">
             {[0, 1].map((i) => (
             <div key={i} className="bg-gray-800 p-2 rounded">

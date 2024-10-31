@@ -2,10 +2,10 @@ import { AspectRatio } from '@mantine/core';
 import ReactPlayer from 'react-player'
 import {DetectedBirds} from '@/lib/Dummy/DetectedBirds';
 
-export function Dash_VideoEmbed() {
+export function Dash_VideoEmbed({ title }: { title: string }) {
   return (
     <>
-    <h2 className="text-lg font-semibold mb-2">탐지 조류 정보</h2>
+    <h2 className="text-lg font-semibold mb-2">{title}</h2>
     <div className="grid grid-cols-2 gap-2">
       {DetectedBirds.map((bird, index) => (
         <div key={bird.filename} className="bg-gray-800 p-2 rounded">

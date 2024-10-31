@@ -14,7 +14,7 @@ const data = [
   { label: '고방오리', stats: '50%', progress: 50, color: 'green', icon: 'up' },
 ] as const;
 
-export function StatsRing() {
+export function StatsRing({ title }: { title: string }) {
   const [animatedProgress, setAnimatedProgress] = useState(
     data.map((stat) => ({ ...stat, animatedValue: 0 }))
   );
@@ -69,6 +69,7 @@ export function StatsRing() {
   return (
     <>
     <div className=' text-black'>
+      <h2 className=" text-white text-lg font-semibold mb-2">{title}</h2>
         <SimpleGrid cols={{ base: 2, sm: 2 }}>{stats}</SimpleGrid>
     </div>
     </>
