@@ -10,9 +10,9 @@ export function Dash_Carousel() {
       loop
       align="start"
     >
-      <Carousel.Slide><div className='bg-violet-950 h-full w-full'>asdafdasfd</div></Carousel.Slide>
-      <Carousel.Slide>2</Carousel.Slide>
-      <Carousel.Slide>3</Carousel.Slide>
+      <Carousel.Slide><div className='bg-violet-950 h-full w-full'>영상 위치1</div></Carousel.Slide>
+      <Carousel.Slide>영상 위치2</Carousel.Slide>
+      <Carousel.Slide>영상 위치3 ...</Carousel.Slide>
     </Carousel>
   );
 }
