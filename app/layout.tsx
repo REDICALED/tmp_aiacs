@@ -3,7 +3,7 @@ import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import { Noto_Sans_KR } from 'next/font/google';
 import '@mantine/charts/styles.css';
-import Nav_menu from '@/components/mantine/Nav_menu';
+import Nav_menu from '@/components/mantine/sm_Nav_menu';
 import {NavbarMinimal} from '@/components/dashboard/Navbar';
 import ClockComponent from "@/components/ClockComponent";
 import Image from 'next/image';

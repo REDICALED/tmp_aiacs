@@ -6,7 +6,8 @@ import { Divider } from '@mantine/core';
 import { ReactNode } from 'react';
 import {Dash_Carousel} from '@/components/mantine/Dash_Carousel';
 import '@mantine/carousel/styles.css';
-
+import ReactPlayer from 'react-player'
+import {Dash_card} from '@/components/mantine/Dash_Card';
 
 function SectionCard({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -34,9 +35,29 @@ export default function Page() {
         </div>
 
     <div className='flex'>
-    <div className="lg:grid lg:grid-rows-4 lg:gap-4 rounded lg:ml-[80px] mt-4 space-y-2 " style={{ width: "calc(100vw - 100px)" }}>
+    <div className="lg:grid lg:grid-rows-4 lg:gap-4 rounded lg:ml-[80px] mt-4 space-y-2 " style={{ width: "100vw" }}>
     <SectionCard title='실시간 영상'>
-          <Dash_Carousel />
+      <div className=" lg:grid lg:grid-cols-4 " >
+
+            <div className='px-4 lg:w-full w-full my-4'>
+                <div className='px-4 '>
+                  <Dash_card url='@/DummyDB/Ardea.mp4' />
+                </div>
+            </div>
+
+            <div className='px-4 lg:w-full w-full my-4'>
+                <div className='px-4 '>
+                  <Dash_card url='@/DummyDB/Ardea.mp4' />
+                </div>
+            </div>
+
+            <div className='px-4 lg:w-full w-full my-4'>
+                <div className='px-4 '>
+                  <Dash_card url='@/DummyDB/Ardea.mp4' />
+                </div>
+            </div>
+
+          </div>
     </SectionCard>
           <SectionCard title='주간 조류 관찰 차트 1'>
             <div className=" lg:grid lg:grid-cols-3 space-y-2" >
@@ -57,8 +78,10 @@ export default function Page() {
             </div>
 
             <div className='px-4 lg:w-full w-full'>
-            <div className="bg-gray-800 rounded ">
-            <Dash_BarChart title={''}/>
+            <div className='pl-1  bg-gray-800 rounded'>
+              <div className='px-4'>
+              <Dash_BarChart title={''}/>
+              </div>
             </div>
             </div>
           </div>

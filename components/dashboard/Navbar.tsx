@@ -1,3 +1,5 @@
+'use client';
+
 import { Tooltip, UnstyledButton, Stack } from '@mantine/core';
 import {
   IconHome2,
@@ -11,16 +13,21 @@ import {
 import classes from './NavbarMinimal.module.css';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface NavbarLinkProps {
   icon: typeof IconHome2;
   label: string;
+  isActive: boolean;
+
 }
 
-function NavbarLink({ icon: Icon, label }: NavbarLinkProps) {
+function NavbarLink({ icon: Icon, label, isActive  }: NavbarLinkProps) {
   return (
     <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
-      <UnstyledButton className={classes.link}>
+      <UnstyledButton className={classes.link}
+              data-active={isActive ? 'true' : undefined}
+>
         <Icon className="grid place-items-center text-gray-600 " style={{ width: 40, height: 40 }} stroke={1.5} />
       </UnstyledButton>
     </Tooltip>
@@ -36,13 +43,18 @@ const mockdata = [
 ];
 
 export function NavbarMinimal() {
-  const links = mockdata.map((link) => (
-    <Link key={link.label} href={ link.label === 'Home' ?  `/` : `/${link.label}`}>
+
+  const pathname = usePathname();
+
+  const links = mockdata.map((link) => {
+    const isActive = pathname === (link.label === 'Home' ? '/' : `/${link.label}`);
+    return (<Link key={link.label} href={ link.label === 'Home' ?  `/` : `/${link.label}`}>
       <div className="w-[70px] h-[70px] grid place-items-center border-b-[1.4px] border-gray-700">
-        <NavbarLink {...link} />
+        <NavbarLink {...link} isActive={isActive} />
       </div>
-    </Link>
-  ));
+    </Link>)
+    
+});
 
   return (
     <nav className={`${classes.navbar} fixed`}>
@@ -52,13 +64,6 @@ export function NavbarMinimal() {
         </Stack>
       </div>
 
-      <div className="w-[70px] h-[70px] grid place-items-center border-b-[1.4px] border-gray-700">
-        <NavbarLink icon={IconLogout} label="Logout" />
-      </div>
-
-      <div className="w-[70px] h-[70px] grid place-items-center">
-        <NavbarLink icon={IconSwitchHorizontal} label="Change account" />
-      </div>
     </nav>
   );
 }

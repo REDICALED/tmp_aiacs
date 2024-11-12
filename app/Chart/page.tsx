@@ -31,7 +31,7 @@ export default function Page() {
         </div>
 
     <div className='flex'>
-    <div className="lg:grid lg:grid-rows-4 lg:gap-4 rounded lg:ml-[80px] mt-4 space-y-2 " style={{ width: "calc(100vw - 100px)" }}>
+    <div className="lg:grid lg:grid-rows-4 lg:gap-4 rounded lg:ml-[80px] mt-4 space-y-2 " style={{ width: "100vw" }}>
 
           <SectionCard title='주간 조류 관찰 차트 1'>
             <div className=" lg:grid lg:grid-cols-3 space-y-2" >
