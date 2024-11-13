@@ -1,40 +1,46 @@
-"use client"
+"use client";
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { LatLngExpression, LatLngTuple } from 'leaflet';
+import L, { LatLngExpression, LatLngTuple, DragEndEvent } from "leaflet";
+import { useState } from "react";
 
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet-defaulticon-compatibility";
 
+var cctvicon = L.icon({
+    iconUrl: '/device-cctv-filled.png', // Replace with the actual path to your CCTV icon image
+    iconSize:     [25, 25], // size of the icon
+    iconAnchor:   [12, 12], // point of the icon which will correspond to marker's location
+    popupAnchor:  [0,0] // point from which the popup should open relative to the iconAnchor
+});
+
 interface MapProps {
-    posix: LatLngExpression | LatLngTuple,
-    zoom?: number,
+  CameraCoordinates: { location: string; posix: LatLngExpression | LatLngTuple; }[]
+  zoom?: number;
 }
 
 const defaults = {
-    zoom: 15,
-}
+  zoom: 16,
+};
 
-const Map = (Map: MapProps) => {
-    const { zoom = defaults.zoom, posix } = Map
+const Map = ({ CameraCoordinates, zoom = defaults.zoom }: MapProps) => {
 
-    return (
-        <MapContainer
-            center={posix}
-            zoom={zoom}
-            scrollWheelZoom={false}
-            style={{ height: "100%", width: "100%" }}
-        >
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={posix} draggable={false}>
-                <Popup>Hey ! I study here</Popup>
+  // 마커 드래그 종료 시 좌표 업데이트 함수
+  return (
+    <MapContainer className="z-30" center={CameraCoordinates[0].posix} zoom={zoom} scrollWheelZoom={false} style={{ height: "100%", width: "100%" }}>
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      ({CameraCoordinates.map((camera, idx) => (
+            <Marker icon={cctvicon} position={camera.posix} draggable={false} >
+                <Popup key={idx}>{camera.location}</Popup>
             </Marker>
-        </MapContainer>
-    )
-}
+      ))})
+      
+    </MapContainer>
+  );
+};
 
-export default Map
+export default Map;
