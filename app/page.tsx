@@ -6,6 +6,7 @@ import {Dash_BarChart} from '@/components/mantine/Dash_BarChart';
 import {Dash_VideoEmbed} from '@/components/mantine/Dash_VideoEmbed';
 import {Dash_DoughnutChart} from '@/components/mantine/Dash_DoughnutChart';
 import {Dash_NVR} from '@/components/mantine/Dash_NVR';
+import Map from '@/components/leaflet/Map_main'
 
 export default function Page() {
   return (
@@ -52,10 +53,12 @@ export default function Page() {
 
           </div>
 
-            <div className="lg:col-span-2 lg:w-full w-full my-4 lg:my-0">
-              <div className="bg-gray-800 p-4 rounded h-full">
-                <h2 className="text-lg font-semibold mb-2"></h2>
-                <div className="bg-gray-700 h-full rounded"></div>
+          <div className="lg:col-span-2 lg:w-full w-full my-4 lg:my-0" style={{ height: '500px' }}>
+          <div className="bg-gray-800 p-4 rounded h-full">
+                <h2 className="text-lg font-semibold mb-2"> ss</h2>
+                <div className=" rounded z-50 h-[500px]">  
+                <Map posix={[35.287017668410314, 126.14538013145504]} />
+                </div>
               </div>
             </div>
 
