@@ -2,7 +2,7 @@
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L, { LatLngExpression, LatLngTuple, DragEndEvent } from "leaflet";
-import { useState } from "react";
+import {Dash_card} from '@/components/mantine/Dash_Card';
 
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
@@ -28,15 +28,21 @@ const Map = ({ CameraCoordinates, zoom = defaults.zoom }: MapProps) => {
 
   // 마커 드래그 종료 시 좌표 업데이트 함수
   return (
-    <MapContainer className="z-30" center={CameraCoordinates[0].posix} zoom={zoom} scrollWheelZoom={false} style={{ height: "100%", width: "100%" }}>
+    <MapContainer attributionControl={false} className="z-30" center={CameraCoordinates[0].posix} zoom={zoom} scrollWheelZoom={false} style={{ height: "100%", width: "100%" }}>
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       ({CameraCoordinates.map((camera, idx) => (
-            <Marker icon={cctvicon} position={camera.posix} draggable={false} >
-                <Popup key={idx}>{camera.location}</Popup>
-            </Marker>
+            <div>
+              <Marker icon={cctvicon} position={camera.posix} draggable={false} >
+                <Popup maxWidth={99999} key={idx}>   
+                  <div className="w-[30vw]">
+                  <Dash_card url='@/DummyDB/Ardea.mp4' />
+                  </div>
+                </Popup>
+                
+              </Marker>
+            </div>
       ))})
       
     </MapContainer>

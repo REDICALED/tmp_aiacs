@@ -35,7 +35,7 @@ export default function RootLayout({
         <div className='lg:flex grid grid-cols-2 justify-between items-center   mb-4 px-4'>
         <div className='flex items-center'>
             <div className=' relative lg:w-[150px] w-[75px] h-[25px] lg:h-[50px] block '>
-                        <Image className="mr-4" src="/rian.png" alt="logo" layout="fill" />
+                        <Image className="mr-4" src="/rian.png" alt="logo" fill />
                       </div>
               <h1 className=" lg:ml-10 ml-2 lg:text-2xl text-xs font-extrabold">AI-ACS</h1>
         </div>
