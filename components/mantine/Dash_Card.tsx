@@ -1,8 +1,9 @@
+"use client";
+
 import { Card, Text, Badge, Button, Group,Modal } from '@mantine/core';
 import Image from 'next/image';
 import ReactPlayer from 'react-player';
 import { IconClockHour9 } from '@tabler/icons-react';
-import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
 
 export function Dash_card({url}:{url:string}) {

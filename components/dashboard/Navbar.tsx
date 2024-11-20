@@ -6,8 +6,6 @@ import {
   IconChartBar,
   IconDeviceDesktopAnalytics,
   IconSettings,
-  IconLogout,
-  IconSwitchHorizontal,
   IconDeviceCctv
 } from '@tabler/icons-react';
 import classes from './NavbarMinimal.module.css';
