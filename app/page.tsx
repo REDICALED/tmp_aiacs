@@ -6,8 +6,13 @@ import {Dash_BarChart} from '@/components/mantine/Dash_BarChart';
 import {Dash_VideoEmbed} from '@/components/mantine/Dash_VideoEmbed';
 import {Dash_DoughnutChart} from '@/components/mantine/Dash_DoughnutChart';
 import {Dash_NVR} from '@/components/mantine/Dash_NVR';
-import Map from '@/components/leaflet/Map_main'
 import { CameraCoordinates } from '@/lib/Dummy/CameraCoordinates'
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('@/components/leaflet/Map_main'), { 
+  ssr: false,  // 서버 사이드 렌더링 비활성화
+  loading: () => <div>지도 로딩중...</div>  // 선택적: 로딩 중 표시할 컴포넌트
+});
 
 export default function Page() {
   return (
