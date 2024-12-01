@@ -5,10 +5,16 @@ import { Noto_Sans_KR } from 'next/font/google';
 import '@mantine/charts/styles.css';
 import Nav_menu from '@/components/mantine/sm_Nav_menu';
 import {NavbarMinimal} from '@/components/dashboard/Navbar';
-import ClockComponent from "@/components/ClockComponent";
+import dynamic from "next/dynamic";
 import Image from 'next/image';
 import "./globals.css";
 import '@mantine/carousel/styles.css';
+
+const ClockComponent =dynamic(() =>import('@/components/ClockComponent'),
+{
+  ssr: false,
+}
+);
 
 const notoSansKr = Noto_Sans_KR({
   weight: ['300'],
