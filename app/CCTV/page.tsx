@@ -41,19 +41,19 @@ export default function Page() {
 
             <div className='px-4 lg:w-full w-full my-4'>
                 <div className='px-4 '>
-                  <Dash_card url='@/DummyDB/Ardea.mp4' />
+                  <Dash_card url='/DummyDB/Doyo.mp4' />
                 </div>
             </div>
 
             <div className='px-4 lg:w-full w-full my-4'>
                 <div className='px-4 '>
-                  <Dash_card url='@/DummyDB/Ardea.mp4' />
+                  <Dash_card url='/DummyDB/Ardea.mp4' />
                 </div>
             </div>
 
             <div className='px-4 lg:w-full w-full my-4'>
                 <div className='px-4 '>
-                  <Dash_card url='@/DummyDB/Ardea.mp4' />
+                  <Dash_card url='/DummyDB/Egret_test.mp4' />
                 </div>
             </div>
 

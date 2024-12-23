@@ -10,11 +10,7 @@ export function Dash_card({url}:{url:string}) {
 
   return (
     <Card shadow="sm" padding="lg" radius="md" style={{backgroundColor: "#1f1f1f"}} >
-      <Card.Section component="a" href="https://mantine.dev/">
       <ReactPlayer width={'100%'} height={"50%"} controls={true} url={url} />
-
-      </Card.Section>
-
 
       <Text fw={500} size="lg" mt="md" className='flex place-items-center' color='#afafaf'>
           <IconClockHour9 size={18} style={{ marginRight: '0.5rem' }} />

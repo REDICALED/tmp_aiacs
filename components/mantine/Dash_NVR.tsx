@@ -1,5 +1,6 @@
 import VideoFeed from "@/components/VideoFeed";
 import { useState } from 'react';
+import ReactPlayer from "react-player";
 
 export function Dash_NVR({ title }: { title: string }) {
     const [, setLoadingCount] = useState(9);
@@ -14,9 +15,9 @@ export function Dash_NVR({ title }: { title: string }) {
             {[0, 1].map((i) => (
             <div key={i} className="bg-gray-800 p-2 rounded">
                 <div className="bg-gray-700 h-40 rounded">
-                <VideoFeed
+                {/* <VideoFeed
                     key={i}
-                    url={`http://localhost:8080/stream/rian-cam/channel/${i}/webrtc?uuid=rian-cam&channel=${i}`}
+                    url={`/DummyDB/wave1.mp4`}
                     // url={`http://118.131.66.49:5003/stream/rian-cam/channel/0/webrtc?uuid=rian-cam&channel=0`}
                     style={{
                     width: "100%",
@@ -24,7 +25,22 @@ export function Dash_NVR({ title }: { title: string }) {
                     objectFit: "fill",
                     }}
                     onLoaded={handleLoaded}
-                />
+                /> */}
+                <ReactPlayer
+                            url={`/DummyDB/wave${i+1}.mp4`}
+                            playing={true}
+                        controls={true}  // 기본 컨트롤을 사용하지 않고 자체 UI로 대체 가능
+                        width="100%"
+                        height="100%"
+                        muted={true}
+                        config={{
+                          file: {
+                            attributes: {
+                              controlsList: 'nodownload noplaybackrate',  // 다운로드 금지, 재생 속도 조절 금지
+                            },
+                          },
+                        }}
+                          />
                 </div>
                 <p className="text-xs mt-1">YW-0{i} - 실시간</p>
             </div>

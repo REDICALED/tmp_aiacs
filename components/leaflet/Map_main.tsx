@@ -37,7 +37,7 @@ const Map = ({ CameraCoordinates, zoom = defaults.zoom }: MapProps) => {
               <Marker icon={cctvicon} position={camera.posix} draggable={false} >
                 <Popup maxWidth={99999} key={idx}>   
                   <div className="w-[30vw]">
-                  <Dash_card url='@/DummyDB/Ardea.mp4' />
+                  <Dash_card url='/DummyDB/Ardea.mp4' />
                   </div>
                 </Popup>
                 

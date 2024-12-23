@@ -12,7 +12,7 @@ export function Dash_VideoEmbed({ title }: { title: string }) {
           <div className="bg-gray-700 rounded">
           <AspectRatio ratio={16 / 9}>
           <ReactPlayer
-            url={`http://localhost:5001/${bird.filename}.mp4`}
+            url={`/DummyDB/${bird.filename}.mp4`}
             playing={true}
         controls={true}  // 기본 컨트롤을 사용하지 않고 자체 UI로 대체 가능
         width="100%"
